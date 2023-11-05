@@ -73,7 +73,8 @@ server = function(input, output, session) {
       "BMP", "svg", "SVG", "ico", "ICO", "tif", "TIF",
       "gif", "GIF", "webp", "WEBP", "tiff", "TIFF"
     )
-    if (tools::file_ext(file_name) %in% img_ext) {
+    ext = tools::file_ext(file_name)
+    if (ext %in% img_ext) {
       dest_dir = "images"
     } else {
       dest_dir = "source"
