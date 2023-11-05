@@ -23,7 +23,8 @@ library(shiny)
 ui = fluidPage(
   fluidRow(
     column(
-      6, offset = 3,
+      width = 6, 
+      offset = 3,
       br(),
       br(),
       br(),
