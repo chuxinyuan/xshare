@@ -44,13 +44,13 @@ ui = fluidPage(
                    width: 100%;
                    text-align: center;",
           actionButton(
-            inputId = "button_upload",
+            inputId = "upload_file",
             label = "上传文件",
             class = "btn-success",
           )
         ),
         br(),
-        tableOutput("uploadfile"),
+        tableOutput("file_url"),
         br()
       )
     )
@@ -64,7 +64,7 @@ ui = fluidPage(
 server = function(input, output, session) {
   
   # 上传文件
-  observeEvent(input$button_upload, {
+  observeEvent(input$upload_file, {
     
     ## 定义要上传到 GitLab 上的文件
     file = input$choose_file
@@ -102,7 +102,7 @@ server = function(input, output, session) {
     file_url = file.path(blog_url, dest_dir, file_name)
     
     ## 反馈文件的 URL
-    output$uploadfile = renderTable(
+    output$file_url = renderTable(
       print(file_url),
       colnames = FALSE
     )
