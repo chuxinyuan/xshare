@@ -6,10 +6,10 @@
 # 注意：密钥需要转为PEM格式
 # 代码：ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
 
-# Linux 需要安装 libgit2:
+# Linux 系统需要安装 libgit2:
 # Debian: libgit2-dev
 # Fedora / CentOS: libgit2-devel
-# Arch Linux libgit2
+# Arch Linux: libgit2
 
 #------------------------------------------------------------------------------#
 #                               配置环境变量
