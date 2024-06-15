@@ -79,9 +79,9 @@ server = function(input, output, session) {
     )
     ext = tools::file_ext(file_name)
     if (ext %in% img_ext) {
-      dest_dir = "images"
+      dest_dir = "img"
     } else {
-      dest_dir = "source"
+      dest_dir = "src"
     }
     file_add = file.path(local_repo, "static", dest_dir, file_name)
     file.copy(file_path, file_add)
