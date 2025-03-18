@@ -87,14 +87,18 @@ server = function(input, output, session) {
     file.copy(file_path, file_add)
     Sys.sleep(2)
     
-    ## 推送文件到 GitLab 指定仓库
+    ## 推送文件到 GitHub 指定仓库
     git2r::add(local_repo, file_add)
     git2r::commit(local_repo, paste("upload", file_name, sep = " "))
     git2r::push(
       object = local_repo,
       name = "origin",
       refspec = "refs/heads/master",
-      credentials = git2r::cred_ssh_key(),
+      credentials = git2r::cred_ssh_key(
+        publickey = ssh_path("id_ed25519.pub"),
+        privatekey = ssh_path("id_ed25519"),
+        passphrase = character(0)
+      ),
       set_upstream = TRUE
     )
     
