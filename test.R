@@ -2,8 +2,10 @@
 local_repo = "../xmin"
 blog_url = "https://xmin.netlify.app"
 
-file_name = "Blue_flower_by_Elena_Stravoravdi.jpg"
-file_path = "/home/cxy/Pictures/wallpaper/Blue_flower_by_Elena_Stravoravdi.jpg"
+# file_name = "Blue_flower_by_Elena_Stravoravdi.jpg"
+# file_path = "/home/cxy/Pictures/wallpaper/Blue_flower_by_Elena_Stravoravdi.jpg"
+file_name = "pretty.jpg"
+file_path = "E:/Picture/blog/pretty.jpg"
 
 ## 把要上传的文件复制到本地指定目录下
 img_ext = c(
