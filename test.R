@@ -3,7 +3,7 @@ local_repo = "../xmin"
 blog_url = "https://xmin.netlify.app"
 
 file_name = "Blue_flower_by_Elena_Stravoravdi.jpg"
-file_path = "E:/Picture/桌面壁纸/Blue_flower_by_Elena_Stravoravdi.jpg"
+file_path = "/home/cxy/Pictures/wallpaper/Blue_flower_by_Elena_Stravoravdi.jpg"
 
 ## 把要上传的文件复制到本地指定目录下
 img_ext = c(
@@ -27,8 +27,8 @@ git2r::push(
   name = "origin",
   refspec = "refs/heads/master",
   credentials = git2r::cred_ssh_key(
-    publickey = ssh_path("id_ed25519.pub"),
-    privatekey = ssh_path("id_ed25519"),
+    publickey = git2r::ssh_path("id_ed25519.pub"),
+    privatekey = git2r::ssh_path("id_ed25519"),
     passphrase = character(0)
   ),
   set_upstream = TRUE
